@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>迷你vue框架</title>
+	</head>
+	<body>
+		
+		<div id="app">
+			
+			你的框架运行了 {{ count }} s 还没有报错
+			
+		</div>
+		
+	</body>
+	<script src="minVue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		let vue = new Vue({
+			
+			el: '#app',
+			data: {
+				
+				count: 0
+				
+			}
+			
+		})
+		
+		setInterval(() => {
+			
+			vue.$data.count += 1
+			
+		},1000)
+		
+	</script>
+</html>
